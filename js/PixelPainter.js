@@ -55,7 +55,7 @@ pixelPainter.appendChild(ppCanvas);
 for (var i = 0; i < 800; i++) {
   var square = document.createElement('button');
   square.classList.add('square');
-  square.addEventListener('mousemove', function(){
+  square.addEventListener('mousedown', function(){
   this.style.backgroundColor = swatchColor;
   });
   ppCanvas.appendChild(square);
