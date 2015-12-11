@@ -2,8 +2,20 @@ html {
   box-sizing: border-box;
   color:#222;
 }
+body {
+
+  margin:0;
+  background-color: #F4EAD5;
+
+}
+
 h1 {
-  text-align: center;
+  margin-top: 0px;
+  background-color: #C6E5D9;
+  color:#E94E77;
+  padding-left:30px;
+  line-height: 2em;
+  border-bottom: #D68189;
 }
 #Pixel-Painter {
 
@@ -27,7 +39,7 @@ h1 {
 
 .nav {
   display:inline-block;
-  background-color: orange;
+  background-color: #C6A49A;
   width: 200px;
   height: 695px;
   margin: 30px;

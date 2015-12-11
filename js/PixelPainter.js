@@ -59,4 +59,27 @@ for (var i = 0; i < 800; i++) {
   this.style.backgroundColor = swatchColor;
   });
   ppCanvas.appendChild(square);
+
 }
+
+
+
+var clear = document.createElement('button');
+clear.innerHTML = "Clear";
+clear.classList.add('clear');
+navigation.appendChild(clear);
+clear.addEventListener('click', function() {
+var selectSquare = document.querySelectorAll('.square');
+for (var i = 0; i < selectSquare.length; i++) {
+  selectSquare[i].style.backgroundColor = '#FFFFFF';
+}
+});
+
+var erase = document.createElement('button');
+erase.innerHTML = "Erase";
+erase.classList.add('erase');
+navigation.appendChild(erase);
+erase.addEventListener('click', function () {
+  swatchColor = '#FFFFFF';
+});
+
