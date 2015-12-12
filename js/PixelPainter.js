@@ -4,6 +4,7 @@ var pixelPainter = document.getElementById('Pixel-Painter');
 var navigation = document.createElement('div');
 navigation.classList.add('nav');
 pixelPainter.appendChild(navigation);
+var current_swatch_color = null;
 
 var colorArray = [
 '#51574a',    '#447c69',    '#74c493',
@@ -24,10 +25,15 @@ var colorArray = [
 
 for (var i = 0; i < colorArray.length; i++) {
   var swatch = document.createElement('button');
-  swatch.id = 'swatchN' + i;
+  swatch.id = colorArray[i];
   swatch.classList.add('swatch');
-  swatch.style.color = '#FF0000';
+  swatch.style.backgroundColor = colorArray[i];
+  //swatch.addEventListener('click', colorSelection);
   navigation.appendChild(swatch);
+}
+
+function colorSelector(){
+  console.log("hello");
 }
 
 var ppCanvas = document.createElement('div');
