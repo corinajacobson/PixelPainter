@@ -3,20 +3,17 @@ html {
   color:#222;
   font-family: sans-serif;
 }
-body {
-
-  margin:0;
-  background-color: #F4EAD5;
-
-}
-
 h1 {
+<<<<<<< HEAD
   margin-top: 0px;
   background-color: #C6E5D9;
   color:#E94E77;
   padding-left:50px;
   line-height: 2em;
   border-bottom: 4px solid #D68189;
+=======
+  text-align: center;
+>>>>>>> parent of 625bd4b... clear and erase working
 }
 #Pixel-Painter {
 
@@ -40,7 +37,7 @@ h1 {
 
 .nav {
   display:inline-block;
-  background-color: #C6A49A;
+  background-color: orange;
   width: 200px;
   /*height: 695px;*/
   margin: 30px;

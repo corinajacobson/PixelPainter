@@ -78,7 +78,10 @@ var erase = document.createElement('button');
 erase.innerHTML = "Erase";
 erase.classList.add('erase');
 navigation.appendChild(erase);
-erase.addEventListener('click', function () {
+  erase.addEventListener('click', function () {
   swatchColor = '#FFFFFF';
 });
 
+
+}
+>>>>>>> parent of 625bd4b... clear and erase working
