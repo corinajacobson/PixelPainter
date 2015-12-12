@@ -1,4 +1,3 @@
-
 var pixelPainter = document.getElementById('Pixel-Painter');
 
 var navigation = document.createElement('div');
@@ -7,34 +6,75 @@ pixelPainter.appendChild(navigation);
 var current_swatch_color = null;
 
 var colorArray = [
-'#51574a',    '#447c69',    '#74c493',
-'#8e8c6d',    '#e4bf80',    '#e9d78e',
-'#e2975d',    '#f19670',   '#e16552',
-'#c94a53',   '#be5168',    '#a34974',
-'#993767',    '#65387d',    '#4e2472',
-'#9163b6',    '#e279a3',    '#e0598b',
-'#7c9fb0',    '#5698c4',    '#9abf88',
-'#1a1334',    '#26294a',    '#01545a',
-'#017351',    '#03c383',    '#aad962',
-'#fbbf45',    '#ef6a32',    '#ed0345',
-'#a12a5e',    '#710162',    '#110141',
-'#d53e4f',    '#f46d43',    '#fdae61',
-'#fee08b',    '#ffffbf',    '#e6f598',
-'#abdda4',    '#66c2a5',    '#3288bd'
+//black
+'#1A1334',
+'#110141',
+'#26294A',
+
+//purple
+'#4E2472',
+'#710162',
+'#65387D',
+'#9163B6',
+
+//green
+'#51574A',
+'#8E8C6D',
+'#017351',
+'#447C69',
+'#03C383',
+'#74C493',
+//blue
+'#15475A',
+'#3288BD',
+
+'#5698C4',
+'#66C2A5',
+
+
+'#7C9FB0',
+
+
+'#993767',
+'#9ABF88',
+'#A12A5E',
+'#A34974',
+'#AAD962',
+'#ABDDA4',
+'#BE5168',
+'#C94A53',
+'#D53E4F',
+'#E0598B',
+'#E16552',
+'#E279A3',
+'#E2975D',
+'#E4BF80',
+'#E6F598',
+'#E9D78E',
+'#ED0345',
+'#EF6A32',
+'#F19670',
+'#F46D43',
+'#FBBF45',
+'#FDAE61',
+'#FEE08B',
+'#FFFFBF'
 ];
+
+var swatchColor = null;
+var colorSelector = function () {
+  swatchColor = this.id;
+};
 
 for (var i = 0; i < colorArray.length; i++) {
   var swatch = document.createElement('button');
   swatch.id = colorArray[i];
   swatch.classList.add('swatch');
   swatch.style.backgroundColor = colorArray[i];
-  //swatch.addEventListener('click', colorSelection);
+  swatch.addEventListener('click', colorSelector);
   navigation.appendChild(swatch);
 }
 
-function colorSelector(){
-  console.log("hello");
-}
 
 var ppCanvas = document.createElement('div');
 ppCanvas.classList.add('pp-canvas');
@@ -42,12 +82,10 @@ pixelPainter.appendChild(ppCanvas);
 
 for (var i = 0; i < 800; i++) {
   var square = document.createElement('button');
-  square.id = 'square' + i;
   square.classList.add('square');
+  square.addEventListener('click', function(){
+  this.style.backgroundColor = swatchColor;    //qwerty
+  });
   ppCanvas.appendChild(square);
 
-  square.addEventListener('click', function () {
-    // this.classList.add('');
-    console.log(this.id);
-  });
 }
