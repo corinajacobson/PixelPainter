@@ -1,57 +1,60 @@
 html {
-  box-sizing: border-box;
-  color:#222;
-  font-family: sans-serif;
+ box-sizing: border-box;
+ color:#222;
+ font-family: sans-serif;
 }
+body {
+
+ margin:0;
+ background-color: #F4EAD5 ;
+
+}
+
 h1 {
-<<<<<<< HEAD
-  margin-top: 0px;
-  background-color: #C6E5D9;
-  color:#E94E77;
-  padding-left:50px;
-  line-height: 2em;
-  border-bottom: 4px solid #D68189;
-=======
-  text-align: center;
->>>>>>> parent of 625bd4b... clear and erase working
+ margin-top: 0px;
+ background-color: #C6E5D9 ;
+ color:#E94E77 ;
+ padding-left:50px;
+ line-height: 2em;
+ border-bottom: 4px solid #D68189 ;
 }
 #Pixel-Painter {
 
 }
 .pp-canvas {
-  height: 800px;
-  width: 800px;
-  display:inline-block;
-  float:left;
-  vertical-align: top;
-  /*border: 1px solid #222;*/
+ height: 800px;
+ width: 800px;
+ display:inline-block;
+ float:left;
+ vertical-align: top;
+ /*border: 1px solid #222;*/
 }
 .square {
-  border-width: 1px;
-  background: rgb(255, 255, 255);
-  display:inline-block;
-  width: 25px;
-  height:25px;
-  padding: 5px;
+ border-width: 1px;
+ background: rgb(255, 255, 255);
+ display:inline-block;
+ width: 25px;
+ height:25px;
+ padding: 5px;
 }
 
 .nav {
-  display:inline-block;
-  background-color: orange;
-  width: 200px;
-  /*height: 695px;*/
-  margin: 30px;
-  padding: 15px;
-  float:left;
-  vertical-align: top;
+ display:inline-block;
+ background-color: #C6A49A ;
+ width: 200px;
+ /*height: 695px;*/
+ margin: 30px;
+ padding: 15px;
+ float:left;
+ vertical-align: top;
 
 }
 
 .swatch {
-  border-width: 1px;
-  display:inline-block;
-  width: 30px;
-  height:30px;
-  padding: 5px;
+ border-width: 1px;
+ display:inline-block;
+ width: 30px;
+ height:30px;
+ padding: 5px;
 }
 .swatch:onclick
