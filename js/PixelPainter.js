@@ -58,10 +58,12 @@ var module = (function() {
     for (var i = 0; i < grid; i++) {
       var square = document.createElement('div');
       square.classList.add('square');
-      square.addEventListener('click', function(){
+      square.id = 'square'+i;
+      ppCanvas.appendChild(square);
+
+      square.addEventListener('mousedown', function(){
       this.style.backgroundColor = swatchColor;
       });
-      ppCanvas.appendChild(square);
     }
   }
   function clearCanvas () {
