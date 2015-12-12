@@ -1,6 +1,3 @@
-// var pixel = document.getElementById(("pixelPainter"));
-// var button = document.createElement("button");
-// pixel.appendChild('button');
 
 var pixelPainter = document.getElementById('Pixel-Painter');
 
@@ -25,16 +22,16 @@ var colorArray = [
 '#abdda4',    '#66c2a5',    '#3288bd'
 ];
 
-for (var i = 0; i < 42; i++) {
+for (var i = 0; i < colorArray.length; i++) {
   var swatch = document.createElement('button');
   swatch.id = 'swatchN' + i;
   swatch.classList.add('swatch');
+  swatch.style.color = '#FF0000';
   navigation.appendChild(swatch);
 }
 
 var ppCanvas = document.createElement('div');
 ppCanvas.classList.add('pp-canvas');
-// document.createElement('pp-canvas');
 pixelPainter.appendChild(ppCanvas);
 
 for (var i = 0; i < 800; i++) {
@@ -44,7 +41,7 @@ for (var i = 0; i < 800; i++) {
   ppCanvas.appendChild(square);
 
   square.addEventListener('click', function () {
-    this.classList.add('');
+    // this.classList.add('');
     console.log(this.id);
   });
 }

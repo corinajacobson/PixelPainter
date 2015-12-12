@@ -13,6 +13,7 @@ h1 {
   width: 800px;
   display:inline-block;
   float:left;
+  vertical-align: top;
   /*border: 1px solid #222;*/
 }
 .square {
@@ -32,6 +33,7 @@ h1 {
   margin: 30px;
   padding: 15px;
   float:left;
+  vertical-align: top;
 
 }
 
