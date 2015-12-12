@@ -28,8 +28,8 @@ var colorArray = [
 '#CC0099',
 '#990099',
 '#660099',
-'#330099',
 '#400099',
+'#330099',
 '#000000'
 ];
 
@@ -39,7 +39,7 @@ var colorSelector = function () {
 };
 
 for (var i = 0; i < colorArray.length; i++) {
-  var swatch = document.createElement('button');
+  var swatch = document.createElement('div');
   swatch.id = colorArray[i];
   swatch.classList.add('swatch');
   swatch.style.backgroundColor = colorArray[i];

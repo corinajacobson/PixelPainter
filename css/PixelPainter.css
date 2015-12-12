@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   color:#222;
+  font-family: sans-serif;
 }
 body {
 
@@ -13,9 +14,9 @@ h1 {
   margin-top: 0px;
   background-color: #C6E5D9;
   color:#E94E77;
-  padding-left:30px;
+  padding-left:50px;
   line-height: 2em;
-  border-bottom: #D68189;
+  border-bottom: 4px solid #D68189;
 }
 #Pixel-Painter {
 
@@ -41,7 +42,7 @@ h1 {
   display:inline-block;
   background-color: #C6A49A;
   width: 200px;
-  height: 695px;
+  /*height: 695px;*/
   margin: 30px;
   padding: 15px;
   float:left;
@@ -51,9 +52,9 @@ h1 {
 
 .swatch {
   border-width: 1px;
-  /*background: rgb(255, 255, 255);*/
   display:inline-block;
-  width: 40px;
-  height:40px;
+  width: 30px;
+  height:30px;
   padding: 5px;
 }
+.swatch:onclick
