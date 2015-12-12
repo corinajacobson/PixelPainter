@@ -3,7 +3,6 @@ var pixelPainter = document.getElementById('Pixel-Painter');
 var navigation = document.createElement('div');
 navigation.classList.add('nav');
 pixelPainter.appendChild(navigation);
-var current_swatch_color = null;
 
 var colorArray = [
 '#FFFFFF',
