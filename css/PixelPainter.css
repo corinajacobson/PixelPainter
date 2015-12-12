@@ -1,0 +1,45 @@
+html {
+  box-sizing: border-box;
+  color:#222;
+}
+h1 {
+  text-align: center;
+}
+#Pixel-Painter {
+
+}
+.pp-canvas {
+  height: 800px;
+  width: 800px;
+  display:inline-block;
+  float:left;
+  /*border: 1px solid #222;*/
+}
+.square {
+  border-width: 1px;
+  background: rgb(255, 255, 255);
+  display:inline-block;
+  width: 25px;
+  height:25px;
+  padding: 5px;
+}
+
+.nav {
+  display:inline-block;
+  background-color: orange;
+  width: 200px;
+  height: 695px;
+  margin: 30px;
+  padding: 15px;
+  float:left;
+
+}
+
+.swatch {
+  border-width: 1px;
+  /*background: rgb(255, 255, 255);*/
+  display:inline-block;
+  width: 25px;
+  height:25px;
+  padding: 5px;
+}
