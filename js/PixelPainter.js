@@ -62,31 +62,30 @@ var module = (function() {
      var square = document.createElement('div');
      square.classList.add('square');
      square.id = ('square' + i);
+     ppCanvas.appendChild(square);
      square.addEventListener('mousedown', function(){
-         if(!clickDown) {
-          var obj = {
-            pixel: this.id,
-            color: this.style.background || '#FFFFFF' };
-            history.push(obj);
-            this.style.background = swatchColor;
-            clickDown = true;
-          } else {
-            clickDown = false;
-          }
-      });
-     square.addEventListener('mouseup', function(){
-       clickDown = false;
-     });
+      var obj = {
+        pixel: this.id,
+        color: this.style.backgroundColor
+      };
+      history.push(obj);
+      this.style.backgroundColor = swatchColor;
+      clickDown = true;
+    });
+
+    square.addEventListener('mouseup', function(){
+      clickDown = false;
+    });
+
      square.addEventListener('mouseover', function(){
        if (clickDown === true){
         var obj = {
           pixel : this.id,
-          color : this.style.background };
+          color : this.style.backgroundColor };
         history.push(obj);
          this.style.backgroundColor = swatchColor;
        }
      });
-     ppCanvas.appendChild(square);
    }
  }
 
@@ -125,6 +124,7 @@ var module = (function() {
     navigation.appendChild(undo);
     //action
     undo.addEventListener('click', function () {
+      console.log(history);
       if(history.length > 0) {
         var undoSquare = history[history.length-1].pixel;
         var undoColor = history[history.length-1].color;
