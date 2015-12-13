@@ -10,6 +10,7 @@ var module = (function() {
     swatchColor = this.id;
   };
   var gridNumber = 1008;
+  var click_down = false;
 
   function coloring (colors) {
     var colorArray = colors || [
@@ -58,11 +59,18 @@ var module = (function() {
     for (var i = 0; i < grid; i++) {
       var square = document.createElement('div');
       square.classList.add('square');
-      square.id = 'square'+i;
-      ppCanvas.appendChild(square);
 
       square.addEventListener('mousedown', function(){
-      this.style.backgroundColor = swatchColor;
+        click_down = true;
+        this.style.backgroundColor = swatchColor;
+      });
+      square.addEventListener('mouseup', function(){
+        click_down = false;
+      });
+      square.addEventListener('mouseover', function(){
+        if (click_down === true){
+          this.style.backgroundColor = swatchColor;
+        }
       });
     }
   }
@@ -79,6 +87,7 @@ var module = (function() {
     });
   }
 
+
   function eraseCanvas () {
     var erase = document.createElement('button');
     erase.innerHTML = "Erase";
@@ -89,6 +98,7 @@ var module = (function() {
     });
   }
 
+
   return {
     renderCanvas: renderCanvas,
     clearCanvas: clearCanvas,
@@ -96,4 +106,5 @@ var module = (function() {
     coloring: coloring
   };
 })(); //self-invoking function
+
 
