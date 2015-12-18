@@ -18,14 +18,13 @@ var module = (function() {
     swatchColor = this.id;
   };
 
-  var gridNumber = 1020;
+  var gridNumber = 1500;
   var clickDown = false;
 
   var history = [];
 
   function coloring (colors) {
     var colorArray = colors || [
-      '#FFFFFF',
       '#E60066',
       '#FF0000',
       '#FF3300',
@@ -49,6 +48,12 @@ var module = (function() {
       '#660099',
       '#400099',
       '#330099',
+      '#FFFFFF',
+      '#F2F2F2',
+      '#BDBDBD',
+      '#848484',
+      '#585858',
+      '#2E2E2E',
       '#000000'
     ];
 

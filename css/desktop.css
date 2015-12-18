@@ -5,10 +5,8 @@ html {
  font-family: sans-serif;
 }
 body {
-
- margin:0;
- background-color: #F4EAD5 ;
-
+ margin:0; /*here on purpose */
+ background-color: #F4EAD5;
 }
 
 h1 {
@@ -28,6 +26,7 @@ h1 {
  display:inline-block;
  float:left;
  vertical-align: top;
+ overflow:hidden;
  /*border: 1px solid #222;*/
 
 }
@@ -43,10 +42,11 @@ h1 {
 .nav {
   display:inline-block;
   background-color: #C6A49A ;
-  width: 22%;
+  width: 20%;
   margin-right: 30px;
   float:left;
   vertical-align: top;
+  padding: 20px;
 
 }
 .mobile-nav {
@@ -62,9 +62,11 @@ h1 {
 
 .clear {
   display:block;
+  background-color: #C6E5D9;
   text-align: center;
-  padding-top: 5px;
   text-transform: uppercase;
+  margin:auto;
+  max-width: 200px;
 
 }
 
@@ -79,4 +81,5 @@ h1 {
 .swatches {
   margin:auto;
   display: block;
+  max-width: 200px
 }

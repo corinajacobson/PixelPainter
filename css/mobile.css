@@ -6,6 +6,11 @@
 
   }
 
+  h1 {
+    text-align: center;
+    line-height: 1em;
+  }
+
   .swatches {
     display: none;
   }
