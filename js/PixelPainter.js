@@ -103,7 +103,7 @@ var module = (function() {
   function clearCanvas () {
 
     //creating button
-     var clear = document.createElement('button');
+     var clear = document.createElement('div');
 
      clear.innerHTML = "Clear";
      clear.classList.add('clear');
@@ -121,7 +121,7 @@ var module = (function() {
    }
    function eraseCanvas () {
     //creating button
-     var erase = document.createElement('button');
+     var erase = document.createElement('div');
 
      erase.innerHTML = "Erase";
      erase.classList.add('clear');
@@ -136,9 +136,9 @@ var module = (function() {
 
     function createUndo () {
       //creating button
-      var undo = document.createElement('button');
-
+      var undo = document.createElement('div');
       undo.innerHTML = "Undo";
+      undo.classList.add('clear');
       navigation.appendChild(undo);
 
       //action

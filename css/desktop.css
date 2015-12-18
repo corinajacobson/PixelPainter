@@ -61,10 +61,14 @@ margin-right: 30px;
  height:30px;
  padding: 5px;
 }
-.swatch:onclick
+/*.swatch:onclick*/
 
 .clear {
-  margin: auto;
+  display:block;
+  text-align: center;
+  padding-top: 5px;
+  text-transform: uppercase;
+
 }
 
 .no-display {
