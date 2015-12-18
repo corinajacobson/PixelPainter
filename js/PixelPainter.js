@@ -1,14 +1,17 @@
 var module = (function() {
   var pixelPainter = document.getElementById('Pixel-Painter');
   var ppCanvas = document.createElement('div');
-
+  var swatch;
   var navigation = document.createElement('div');
+  var swatches = document.createElement('div');
   navigation.classList.add('nav');
   pixelPainter.appendChild(navigation);
 
   var mobileNav = document.createElement('div');
   mobileNav.classList.add('mobile-nav');
+  swatches.classList.add('swatches');
   navigation.appendChild(mobileNav);
+  navigation.appendChild(swatches);
 
   var swatchColor = '#FFFFFF';
   var colorSelector = function () {
@@ -50,12 +53,12 @@ var module = (function() {
     ];
 
    for (var i = 0; i < colorArray.length; i++) {
-      var swatch = document.createElement('div');
+      swatch = document.createElement('div');
       swatch.id = colorArray[i];
       swatch.classList.add('swatch');
       swatch.style.backgroundColor = colorArray[i];
       swatch.addEventListener('click', colorSelector);
-      navigation.appendChild(swatch);
+      swatches.appendChild(swatch);
     }
   }
 
@@ -163,12 +166,9 @@ var module = (function() {
     hamburger.addEventListener('click', function () {
       hamburger.style.backgroundColor = '#FFFFFF';
       ppCanvas.classList.toggle('no-display');
+      swatches.classList.toggle('show');
+      navigation.classList.toggle('full-width');
 
-      // if(navigation.id === "full-width") {
-      //   .id = "no-display";
-      // } else {
-      //   navigation.id = "full-width";
-      // }
     });
 
   }

@@ -6,10 +6,12 @@
 
   }
 
-  .swatch {
+  .swatches {
     display: none;
   }
-
+  .show{
+    display:block;
+  }
   .mobile-nav {
     display: block;
     width: 30px;
@@ -18,11 +20,11 @@
     margin: auto;
   }
 
-  #no-display {
+  .no-display {
     display:none;
   }
 
-  #full-width {
+  .full-width {
     width: 80%;
   }
 }
