@@ -7,7 +7,7 @@
   }
 
   .swatch {
-
+    display: none;
   }
 
   .mobile-nav {
@@ -16,6 +16,14 @@
     height: 30px;
     background-color: #000;
     margin: auto;
+  }
+
+  #no-display {
+    display:none;
+  }
+
+  #full-width {
+    width: 80%;
   }
 }
 

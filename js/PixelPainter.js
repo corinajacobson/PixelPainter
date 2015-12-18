@@ -1,5 +1,6 @@
 var module = (function() {
   var pixelPainter = document.getElementById('Pixel-Painter');
+  var ppCanvas = document.createElement('div');
 
   var navigation = document.createElement('div');
   navigation.classList.add('nav');
@@ -60,7 +61,6 @@ var module = (function() {
 
   function renderCanvas (grid) {
     grid = grid || gridNumber;
-    var ppCanvas = document.createElement('div');
 
     ppCanvas.classList.add('pp-canvas');
     pixelPainter.appendChild(ppCanvas);
@@ -162,7 +162,13 @@ var module = (function() {
     var hamburger = document.getElementsByClassName('mobile-nav')[0];
     hamburger.addEventListener('click', function () {
       hamburger.style.backgroundColor = '#FFFFFF';
+      ppCanvas.classList.toggle('no-display');
 
+      // if(navigation.id === "full-width") {
+      //   .id = "no-display";
+      // } else {
+      //   navigation.id = "full-width";
+      // }
     });
 
   }
