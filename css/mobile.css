@@ -1,4 +1,25 @@
 
-@media screen and (max-width 480px) {
+@media screen and (max-width: 480px) {
 
+
+  .nav {
+
+  }
+
+  .swatch {
+
+  }
+
+  .mobile-nav {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    margin: auto;
+  }
 }
+
+
+
+/*add event listener to window so that when the window becomes a certain width. We change it to a display of none*/
+/*Then we display the mobile nav that has the pop up buttons */

@@ -5,12 +5,16 @@ var module = (function() {
   navigation.classList.add('nav');
   pixelPainter.appendChild(navigation);
 
+  var mobileNav = document.createElement('div');
+  mobileNav.classList.add('mobile-nav');
+  navigation.appendChild(mobileNav);
+
   var swatchColor = '#FFFFFF';
   var colorSelector = function () {
     swatchColor = this.id;
   };
 
-  var gridNumber = 1008;
+  var gridNumber = 1020;
   var clickDown = false;
 
   var history = [];
@@ -120,7 +124,7 @@ var module = (function() {
      var erase = document.createElement('button');
 
      erase.innerHTML = "Erase";
-     erase.classList.add('erase');
+     erase.classList.add('clear');
      navigation.appendChild(erase);
 
      //action
@@ -152,6 +156,15 @@ var module = (function() {
         }
 
       });
+
+ }
+  function mobileSwatch () {
+    var hamburger = document.getElementsByClassName('mobile-nav')[0];
+    hamburger.addEventListener('click', function () {
+      hamburger.style.backgroundColor = '#FFFFFF';
+
+    });
+
   }
 
   return {
@@ -160,6 +173,7 @@ var module = (function() {
    eraseCanvas: eraseCanvas,
    coloring: coloring,
    createUndo: createUndo,
+   mobileSwatch: mobileSwatch
   };
 
 })(); //self-invoking function
