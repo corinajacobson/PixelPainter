@@ -62,8 +62,8 @@ h1 {
 
 .swatch {
   margin:auto;
-  border-width: 1px;
   display:inline-block;
+  border-width: 1px;
   width: 30px;
   height:30px;
   padding: 5px;

@@ -4,24 +4,23 @@ var module = (function() {
   var swatch;
   var navigation = document.createElement('div');
   var swatches = document.createElement('div');
-  navigation.classList.add('nav');
-  pixelPainter.appendChild(navigation);
-
   var mobileNav = document.createElement('div');
-  mobileNav.classList.add('mobile-nav');
-  swatches.classList.add('swatches');
-  navigation.appendChild(mobileNav);
-  navigation.appendChild(swatches);
+
 
   var swatchColor = '#FFFFFF';
   var colorSelector = function () {
     swatchColor = this.id;
   };
-
   var gridNumber = 1500;
   var clickDown = false;
-
   var history = [];
+
+  navigation.classList.add('nav');
+  mobileNav.classList.add('mobile-nav');
+  swatches.classList.add('swatches');
+  pixelPainter.appendChild(navigation);
+  navigation.appendChild(mobileNav);
+  navigation.appendChild(swatches);
 
   function coloring (colors) {
     var colorArray = colors || [
@@ -126,20 +125,20 @@ var module = (function() {
        selectSquare[i].style.backgroundColor = '#FFFFFF ';
      }
      });
-   }
-   function eraseCanvas () {
-    //creating button
-     var erase = document.createElement('div');
+  }
+ function eraseCanvas () {
+  //creating button
+   var erase = document.createElement('div');
 
-     erase.innerHTML = "Erase";
-     erase.classList.add('clear');
-     navigation.appendChild(erase);
+   erase.innerHTML = "Erase";
+   erase.classList.add('clear');
+   navigation.appendChild(erase);
 
-     //action
-     erase.addEventListener('click', function () {
-       swatchColor = '#FFFFFF';
-     });
-   }
+   //action
+   erase.addEventListener('click', function () {
+     swatchColor = '#FFFFFF';
+   });
+ }
 
 
     function createUndo () {
