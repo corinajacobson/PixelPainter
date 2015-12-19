@@ -167,9 +167,8 @@ var module = (function() {
 
  }
   function mobileSwatch () {
-    var hamburger = document.getElementsByClassName('mobile-nav')[0];
-    hamburger.addEventListener('click', function () {
-      hamburger.style.backgroundColor = '#FFFFFF';
+    var mobileMenu = document.getElementsByClassName('mobile-nav')[0];
+    mobileMenu.addEventListener('click', function () {
       ppCanvas.classList.toggle('no-display');
       swatches.classList.toggle('show');
       navigation.classList.toggle('full-width');
