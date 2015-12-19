@@ -15,6 +15,7 @@ var module = (function() {
   var clickDown = false;
   var history = [];
 
+
   navigation.classList.add('nav');
   mobileNav.classList.add('mobile-nav');
   swatches.classList.add('swatches');
@@ -141,30 +142,34 @@ var module = (function() {
  }
 
 
-    function createUndo () {
-      //creating button
-      var undo = document.createElement('div');
-      undo.innerHTML = "Undo";
-      undo.classList.add('clear');
-      navigation.appendChild(undo);
+  function createUndo () {
+    //creating button
+    var undo = document.createElement('div');
+    undo.innerHTML = "Undo";
+    undo.classList.add('clear');
+    navigation.appendChild(undo);
 
-      //action
-      undo.addEventListener('click', function () {
+    //action
+    undo.addEventListener('click', function () {
 
-        if(history.length > 0) {
-          var undoSquare = history[history.length-1].pixel;
-          var undoColor = history[history.length-1].color;
-          var undoThis = document.getElementById(undoSquare);
-          undoThis.style.background = undoColor;
-          history.pop();
+      if(history.length > 0) {
+        var undoSquare = history[history.length-1].pixel;
+        var undoColor = history[history.length-1].color;
+        var undoThis = document.getElementById(undoSquare);
+        undoThis.style.background = undoColor;
+        history.pop();
 
-        } else {
-          console.log("no more undo's in history");
-        }
+      } else {
+        console.log("no more undo's in history");
+      }
 
-      });
+    });
+  }
+  var hammertime = new Hammer(pixelPainter);
+  hammertime.on('pan', function(ev) {
+    console.log(ev);
+  });
 
- }
   function mobileSwatch () {
     var mobileMenu = document.getElementsByClassName('mobile-nav')[0];
     mobileMenu.addEventListener('click', function () {
